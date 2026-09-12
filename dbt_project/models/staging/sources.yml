@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw
+    database: FOOTBALL_WAREHOUSE
+    schema: RAW
+    tables:
+      - name: raw_matches_flat
+        description: >
+          Raw match data ingested from football-data.co.uk CSVs.
+          One row per match. Columns vary by league and season —
+          older seasons lack match stats, and some leagues lack betting odds.
+        columns:
+          - name: league_code
+            description: "Short code for the league division (E0, SP1, D1, etc.)"
+          - name: season_code
+            description: "Season code like '2324' for 2023-24"
+          - name: hometeam
+            description: "Home team name as it appears in source"
+          - name: awayteam
+            description: "Away team name as it appears in source"
+          - name: fthg
+            description: "Full-time home goals"
+          - name: ftag
+            description: "Full-time away goals"
+          - name: ftr
+            description: "Full-time result: H (home win), D (draw), A (away win)"

@@ -1,0 +1,39 @@
+league_code,league_name,country,tier
+E0,Premier League,England,1
+E1,Championship,England,2
+E2,League One,England,3
+E3,League Two,England,4
+EC,Conference,England,5
+SC0,Premiership,Scotland,1
+SC1,Championship,Scotland,2
+SC2,League One,Scotland,3
+SC3,League Two,Scotland,4
+D1,Bundesliga,Germany,1
+D2,2. Bundesliga,Germany,2
+I1,Serie A,Italy,1
+I2,Serie B,Italy,2
+SP1,La Liga,Spain,1
+SP2,Segunda Division,Spain,2
+F1,Ligue 1,France,1
+F2,Ligue 2,France,2
+N1,Eredivisie,Netherlands,1
+B1,Jupiler League,Belgium,1
+P1,Liga,Portugal,1
+T1,Super Lig,Turkey,1
+G1,Super League,Greece,1
+ARG,Primera Division,Argentina,1
+AUT,Bundesliga,Austria,1
+BRA,Serie A,Brazil,1
+CHN,Super League,China,1
+DNK,Superliga,Denmark,1
+FIN,Veikkausliiga,Finland,1
+IRL,Premier Division,Ireland,1
+JPN,J-League,Japan,1
+MEX,Liga MX,Mexico,1
+NOR,Eliteserien,Norway,1
+POL,Ekstraklasa,Poland,1
+ROU,Liga 1,Romania,1
+RUS,Premier League,Russia,1
+SWE,Allsvenskan,Sweden,1
+SWI,Super League,Switzerland,1
+USA,MLS,USA,1

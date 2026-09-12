@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_matches
+    description: "Cleaned, typed, deduplicated match records"
+    columns:
+      - name: match_id
+        description: "Surrogate key: hash of league + date + home + away"
+        tests:
+          - unique
+          - not_null
+      - name: match_date
+        tests:
+          - not_null
+      - name: home_team
+        tests:
+          - not_null
+      - name: away_team
+        tests:
+          - not_null
+      - name: result_ft
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['H', 'D', 'A']
+
+  - name: int_match_results
+    description: "One row per team per match (unpivoted home/away)"
+    columns:
+      - name: result
+        tests:
+          - accepted_values:
+              values: ['W', 'D', 'L']
+      - name: points
+        tests:
+          - accepted_values:
+              values: [0, 1, 3]
+      - name: venue
+        tests:
+          - accepted_values:
+              values: ['home', 'away']
+
+  - name: mart_team_seasons
+    description: "Aggregated season stats per team"
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "wins + draws + losses = played"
+      - dbt_utils.expression_is_true:
+          expression: "goals_for - goals_against = goal_difference"
+      - dbt_utils.expression_is_true:
+          expression: "total_points = (wins * 3) + draws"
+
+  - name: mart_league_seasons
+    description: "Reconstructed final league tables"
+    columns:
+      - name: position
+        tests:
+          - not_null
+      - name: zone
+        tests:
+          - accepted_values:
+              values: ['Champions League', 'Europa League', 'Relegation', 'Mid-table']
