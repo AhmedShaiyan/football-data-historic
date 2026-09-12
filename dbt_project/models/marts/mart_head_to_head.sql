@@ -1,9 +1,7 @@
 /*
     mart_head_to_head — historical record between every pair of teams.
 
-    One row per team-pair per league, aggregating all meetings.
-    Useful for rivalry analysis, pre-match research, and dashboards
-    showing "last 10 meetings" style stats.
+
 */
 
 with matches as (

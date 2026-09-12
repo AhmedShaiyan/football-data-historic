@@ -1,8 +1,7 @@
 /*
     mart_referee_stats — per-referee career stats.
 
-    Cards per game, goals per game, home win bias — the kind of
-    analysis that's fun to explore and makes a good dashboard panel.
+ 
 */
 
 with results as (

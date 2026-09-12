@@ -2,9 +2,7 @@
     mart_league_seasons — reconstructed final league table for every
     league-season combination.
     
-    Ranks teams by points (then goal difference, then goals scored)
-    to reproduce the actual final standings. Adds promotion/relegation
-    zone flags based on position.
+
 */
 
 with team_seasons as (

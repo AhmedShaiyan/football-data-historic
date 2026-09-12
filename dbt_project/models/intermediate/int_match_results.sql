@@ -3,8 +3,7 @@
     
     Unpivots the home/away structure so every team gets a row
     for every game, tagged with venue (home/away) and result
-    from their perspective. This is the shape that makes
-    aggregations like "wins at home" and "goals per game" trivial.
+    from their perspective.
 */
 
 with matches as (
