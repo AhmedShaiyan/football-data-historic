@@ -29,4 +29,4 @@ dbt test --profiles-dir .
 
 ## Structure
 
-`ingestion/ingest.py` loads raw CSVs into `RAW.RAW_MATCHES_FLAT`. dbt takes it from there: staging cleans it up, intermediate unpivots matches into per-team rows, marts aggregate into team seasons, league tables, head-to-head records, and referee stats.
+`ingestion/ingest.py` loads raw CSVs into `RAW.RAW_MATCHES_FLAT`. dbt: staging cleans it up, intermediate unpivots matches into per-team rows, marts aggregate into team seasons, league tables, head-to-head records, and referee stats.
