@@ -24,9 +24,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# ----------------------------------------------------------------
-# League / season config
-# ----------------------------------------------------------------
 
 # Main European leagues — data back to 1993/94, stats from 2000/01
 MAIN_LEAGUES = {
